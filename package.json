@@ -5,7 +5,7 @@
   "main": "server.js",
   "engines": {
     "node": "8.11.1",
-    "npm": "5.8.0"
+    "npm": "5.6.0"
   },
   "scripts": {
     "dev-server": "node ./server.js"
