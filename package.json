@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for Error-404-Not-Found-codefundo++",
+  "main": "server.js",
+  "scripts": {
+    "dev-server": "node ./server.js"
+  },
+  "author": "Error-404-Not-Found-Codefundo++",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
