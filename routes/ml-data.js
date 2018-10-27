@@ -3,6 +3,19 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 
+var keys = [
+  '89e8be7f9f0f84633f4ad7908eeff98e',
+  '9191d936fc03d4c50faebb90012b5400',
+  'bbcfa74d06e99ad12ff205fd3056624e',
+  'e37f7e7ae93afaea4785e551f46c674d',
+  '7bab51de82c6ead1e59391babd7e8749',
+  '2c15f03013f52a32274500852ff692c5',
+  '1f0261179580554d001dd0b8dd9459fa',
+  '068e13867142400a86f39167e9b5bae3',
+  '10d932bbb3a7eefda9261f505673d969',
+  '097892a0161914c98a49dd0384fce58a',
+];
+
 function proc(jdata) {
   var alert = '';
   if ('alerts' in jdata) {
@@ -106,9 +119,9 @@ router.get('/', (req, res, next) => {
   ];
   var urls = [];
   for (var i = 0; i < locations.length; i++) {
-    var url = `https://api.darksky.net/forecast/9191d936fc03d4c50faebb90012b5400/${locations[
-      i
-    ]}?exclude=currently,minutely,hourly,flags`;
+    var url = `https://api.darksky.net/forecast/${keys[
+      Math.floor(Math.random() * keys.length)
+    ]}/${locations[i]}?exclude=currently,minutely,hourly,flags`;
     urls.push(url);
   }
 
